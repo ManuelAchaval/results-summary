@@ -6,25 +6,27 @@
   box-sizing: border-box;
 }
 
-body {
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: "Hanken Grotesk", sans-serif;
   background: hsl(0, 0%, 100%);
 }
-body h3 {
+main h3 {
   font-weight: 400;
 }
-body p {
+main p {
   font-size: 14px;
 }
 
 footer {
   font-size: 11px;
   text-align: center;
-  position: relative;
+  position: absolute;
   bottom: 0;
+  left: 25%;
+  right: 25%;
 }
 footer a {
   color: hsl(228, 45%, 44%);
@@ -134,4 +136,27 @@ h3 {
   color: white;
   border-style: none;
   border-radius: 25px;
+}
+
+@media (min-width: 376px) {
+  body {
+    display: grid;
+    place-items: center;
+  }
+  main {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 55%;
+    box-shadow: 14px 13px 20px 0px hsla(241, 81%, 54%, 0.12);
+    border-radius: 17px;
+  }
+  .div__sum {
+    max-width: 265px;
+    padding: 2%;
+  }
+  .div__resultado {
+    width: 315px;
+  }
 }/*# sourceMappingURL=style.css.map */
